@@ -84,11 +84,12 @@ function Navbar() {
             ))}
           </ul>
         </div>
+        <Link href="/">
         <div
           style={{
             clipPath: "polygon(0 0, 100% 0%, 90% 100%, 0% 100%)",
           }}
-          className="absolute top-0 flex h-11 w-52 items-center bg-purplish-200 md:h-[4.75rem] md:w-72 lg:w-96 xl:w-[26rem]"
+          className="cursor-pointer absolute top-0 flex h-11 w-52 items-center bg-purplish-200 md:h-[4.75rem] md:w-72 lg:w-96 xl:w-[26rem]"
         >
           <div className="flex w-80 items-center gap-x-2 p-2 md:ml-8 lg:ml-14">
             <div className="relative hidden h-14 w-14 md:inline">
@@ -104,6 +105,7 @@ function Navbar() {
             </div>
           </div>
         </div>
+        </Link>
       </nav>
       <div
         className={`${
