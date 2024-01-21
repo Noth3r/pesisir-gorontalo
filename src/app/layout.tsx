@@ -16,8 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <body className={`font-futura ${montserrat.variable} ${beach.variable} ${cocogoose.variable} ${futura.variable}`}>{children}
       <SpeedInsights/>
-      <body className={`font-futura ${montserrat.variable} ${beach.variable} ${cocogoose.variable} ${futura.variable}`}>{children}</body>
+      </body>
     </html>
   );
 }
