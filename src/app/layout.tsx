@@ -1,4 +1,5 @@
 import { beach, cocogoose, futura, montserrat } from "~/utils/font";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "~/styles/globals.css";
 
 
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-futura ${montserrat.variable} ${beach.variable} ${cocogoose.variable} ${futura.variable}`}>{children}</body>
+      <SpeedInsights/>
     </html>
   );
 }
