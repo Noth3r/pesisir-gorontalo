@@ -43,15 +43,10 @@ function Navbar() {
     const handler = debounce(controlNavbar, 100);
     window.addEventListener("scroll", handler);
 
-    console.log("wow");
     return () => {
       window.removeEventListener("scroll", handler);
     };
   }, [controlNavbar]);
-
-  useEffect(() => {
-    console.log(show);
-  }, [show]);
 
   return (
     <>

@@ -62,8 +62,7 @@ function Hero() {
             Kawasan Desa KKN Kami
           </p>
           <p className="hidden md:inline -mt-2 mb-2 text-center font-futura text-2xl font-light">
-            Kecamatan Batudaa <br />
-            Pantai Kabupaten Gorontalo
+            Kecamatan Batudaa Pantai <br />Kabupaten Gorontalo
             <br /> Provinsi Gorontalo
           </p>
           <div className="flex flex-col gap-y-4 md:gap-y-0 md:flex-row md:gap-x-12 xl:gap-x-64">
