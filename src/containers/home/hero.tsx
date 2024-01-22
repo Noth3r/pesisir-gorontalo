@@ -26,7 +26,7 @@ function Hero() {
       style={{
         backgroundImage: "url('/hero.png')",
       }}
-      className="2xl:h-screen w-full bg-cover bg-top bg-no-repeat pt-4 md:pt-12 2xl:pt-20"
+      className="w-full bg-cover bg-top bg-no-repeat pt-4 md:pt-12 2xl:pt-20"
     >
       <div className="container relative z-10 mx-auto flex flex-col items-center gap-y-12 xl:gap-y-20 2xl:gap-y-32 px-4 py-16 text-bluish-100">
         <div>
