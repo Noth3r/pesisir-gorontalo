@@ -20,7 +20,7 @@ function Logo() {
           </div>
           <h1 className="text-4xl font-cocogoose mt-4 lg:hidden">Logo Kami</h1>
           <p className="px-8 md:px-0 font-futura mt-4 font-light text-xl w-[22rem] text-justify">
-            Logo Kami Sebuah harapan optimis untuk mengembangkan kesejahteraan
+            Sebuah harapan optimis untuk mengembangkan kesejahteraan
             masyarakat pesisir berdampingan dengan keindahan alam pesisir
             Gorontalo
           </p>
