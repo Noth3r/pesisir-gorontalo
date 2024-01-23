@@ -4,22 +4,22 @@ import Link from "next/link";
 const footerList = [
   {
     name: "Instagram",
-    link: "#",
+    link: "https://www.instagram.com/pesisirgorontalo",
     image: "/ig.svg",
   },
   {
     name: "Tiktok",
-    link: "#",
+    link: "https://www.tiktok.com/@pesisirgorontalo",
     image: "/tiktok.svg",
   },
   {
     name: "Youtube",
-    link: "#",
+    link: "https://www.youtube.com/@KKNPesisirGorontalo",
     image: "/youtube.svg",
   },
   {
     name: "Email",
-    link: "#",
+    link: "mailto:kknpesisirgorontalo2024@gmail.com",
     image: "/email.svg",
   },
 ];
