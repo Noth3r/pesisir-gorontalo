@@ -26,7 +26,7 @@ function OprecInfo() {
       <div className="absolute z-10 -bottom-4 xl:-bottom-12 h-20 scale-125 xl:h-80 w-full rounded-b-[50%] bg-purplish-200"></div>
 
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center gap-y-12 xl:gap-y-20 px-4 py-16 text-bluish-100">
-        <div className="font-cocogoose md:pt-20 xl:pt-40">
+        <div className="font-cocogoose md:pt-20 xl:pt-40 2xl:pt-44">
           <h1 className="text-2xl text-center xl:text-4xl text-bluish-100">Open Recruitment</h1>
           <h2 className="text-xl text-center font-light text-bluish-100">
             Anggota Tim KKN PPM UGM
