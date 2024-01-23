@@ -54,7 +54,7 @@ function Hero() {
           </p>
           </div>
           <p className="hidden xl:inline text-center font-sans text-2xl text-white">
-            Mengabdi bersama di surga pesisir belahan Indonesia tengah
+            Mengabdi Bersama di Belahan Pesisir Indonesia
           </p>
         </div>
         <div className="-mt-8 flex flex-col gap-y-4">
