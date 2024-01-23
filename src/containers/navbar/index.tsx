@@ -24,7 +24,7 @@ const navbarList = [
   },
   {
     name: "Contact Us",
-    link: "#",
+    link: "#contact-us",
   },
 ];
 

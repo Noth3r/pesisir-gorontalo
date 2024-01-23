@@ -26,7 +26,7 @@ const footerList = [
 
 function Footer() {
   return (
-    <footer className="relative">
+    <footer className="relative" id="contact-us">
       <div className="absolute -top-20 z-10 h-40 w-full">
         <Image src="/wave-orange.svg" className="object-fill" fill alt="" />
       </div>

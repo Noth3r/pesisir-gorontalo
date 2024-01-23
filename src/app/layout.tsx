@@ -15,7 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+    style={{
+      scrollBehavior: "smooth" ,
+    }}
+    lang="en">
       <body className={`font-futura ${montserrat.variable} ${beach.variable} ${cocogoose.variable} ${futura.variable}`}>{children}
       <SpeedInsights/>
       </body>
