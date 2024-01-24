@@ -4,16 +4,16 @@ import React from "react";
 
 const infoOprec = [
   {
-    name: "Profile KKN",
+    name: "Guidebook",
     link: "#",
   },
   {
     name: "Prasyarat",
-    link: "#",
+    link: "https://drive.google.com/drive/folders/1ibXgS1hQynlF5sZlAfbAypO-vwqKPLUX?usp=sharing",
   },
   {
     name: "Formulir",
-    link: "#",
+    link: "https://bit.ly/OprecPesisirGorontalo2024",
   },
 ];
 
@@ -37,8 +37,8 @@ function OprecInfo() {
           {infoOprec.map((item, index) => (
             <div key={index} className="flex justify-between items-center">
               <p className="font-cocogoose xl:text-4xl">{item.name}</p>
-              <Link href={item.link}>
-                <button className="font-cocogoose xl:text-xl font-[350] text-purplish-200 bg-white px-4 py-2">
+              <Link target="_blank" href={item.link}  >
+                <button  className="rounded-md font-cocogoose xl:text-xl font-[350] text-purplish-200 bg-white px-4 py-2">
                   Kunjungi
                 </button>
               </Link>
@@ -46,7 +46,7 @@ function OprecInfo() {
           ))}
         </div>
         <p className="font-cocogoose text-center xl:text-2xl font-[350]">
-          Jadilah Bagian dari Kami untuk Memajukan Gorontalo
+        Jadilah Bagian dari Kami untuk Memajukan Gorontalo!
         </p>
       </div>
     </div>
