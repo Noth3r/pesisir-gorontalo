@@ -31,7 +31,7 @@ function Footer() {
         <Image src="/wave-orange.svg" className="object-fill" fill alt="" />
       </div>
       <div className="overflow-hidden relative flex h-80 w-full items-center justify-center bg-orangish-200 md:h-72 xl:h-96">
-        <div className="container z-10 flex flex-col justify-between px-14 text-yellowish-100 md:flex-row">
+        <div className="container z-10 flex flex-col justify-between px-14 text-yellowish-100 sm:flex-row">
           <div className="flex flex-col">
             <div>
               <p className="font-beach text-xl uppercase">Pesisir Gorontalo</p>
@@ -43,7 +43,7 @@ function Footer() {
               {footerList.map((item, index) => (
                 <li key={index}>
                   <Link target="_blank" href={item.link}>
-                    <div className="relative h-4 w-4 md:h-12 md:w-12">
+                    <div className="relative h-4 w-4 sm:h-12 sm:w-12">
                       <Image
                         src={item.image}
                         className="object-fill"
@@ -56,7 +56,7 @@ function Footer() {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col items-center md:mt-0 mt-6">
+          <div className="flex flex-col items-center sm:mt-0 mt-6">
             <p className="font-cocogoose font-[350] uppercase">
               Diselenggarakan Oleh
             </p>
@@ -88,7 +88,7 @@ function Footer() {
             alt=""
           />
         </div>
-        <div className="absolute bottom-0 z-0 mx-auto h-96 w-full md:hidden">
+        <div className="absolute bottom-0 z-0 mx-auto h-96 w-full sm:hidden">
           <Image
             src="/line-footer-orange-mobile.svg"
             className="object-fill"

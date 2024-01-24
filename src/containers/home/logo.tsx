@@ -29,8 +29,8 @@ function Logo() {
         <div className="order-first w-full lg:order-last lg:basis-1/2">
           <div className="relative h-72 w-full md:h-96 xl:h-[35rem]">
             <Image
-              src="/logo-transparent.svg"
-              className="object-fill"
+              src="/logo-transparent.png"
+              className="object-contain"
               fill
               alt=""
             />
