@@ -5,7 +5,7 @@ import React from "react";
 const infoOprec = [
   {
     name: "Guidebook",
-    link: "#",
+    link: "https://drive.google.com/file/d/1I2vpBbm9x0Jpfe75_yxnL6CGlxPqovPW/view?usp=sharing",
     bgColor: "#BFF0CB",
   },
   {
