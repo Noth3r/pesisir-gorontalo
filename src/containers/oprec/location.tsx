@@ -17,7 +17,7 @@ function OprecLocation() {
           className="object-cover"
           alt=""
         />
-        <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 py-16 text-bluish-100">
+        <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 py-16 text-white">
           <h1 className="mb-12 font-cocogoose text-4xl font-bold md:pt-12 xl:pt-20">
             Lokasi KKN
           </h1>
