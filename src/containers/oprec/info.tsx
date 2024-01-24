@@ -31,7 +31,7 @@ function OprecInfo() {
         alt=""
       />
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center gap-y-12 px-4 py-16 text-white xl:gap-y-20">
-        <div className="font-cocogoose md:pt-20 xl:pt-40 2xl:pt-44">
+        <div className="font-cocogoose">
           <h1 className="text-center text-2xl xl:text-4xl text-yellowish-100">
             Open Recruitment
           </h1>
