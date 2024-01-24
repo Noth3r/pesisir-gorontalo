@@ -2,12 +2,14 @@ import Image from "next/image";
 
 function Logo() {
   return (
-    <div
-      style={{
-        backgroundImage: "url('/logo-bg.png')",
-      }}
-      className="w-full bg-cover bg-top bg-no-repeat"
-    >
+    <div className="relative w-full bg-cover bg-top bg-no-repeat">
+      <Image
+        quality={100}
+        src="/logo-bg.png"
+        fill
+        className="object-cover"
+        alt=""
+      />
       <div className="container relative z-10 mx-auto flex flex-col items-center justify-center px-4 py-16 text-bluish-100 lg:flex-row lg:py-32 2xl:py-48">
         <div className="flex flex-col items-center justify-center lg:-mr-24 lg:basis-1/2 xl:-mr-44">
           <div className="relative hidden w-full lg:inline lg:h-[14.5rem]">
