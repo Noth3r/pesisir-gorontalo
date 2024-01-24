@@ -27,6 +27,7 @@ function Hero() {
         quality={100}
         src="/hero.png"
         fill
+        priority
         className="object-cover"
         alt=""
       />
