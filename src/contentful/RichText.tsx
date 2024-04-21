@@ -32,7 +32,7 @@ function RichText({ document }: RichTextProps) {
                   src={data?.src}
                   srcSet={`${data?.src} 1x, ${data?.src} 2x`}
                   alt={data?.alt}
-                  className="my-4 ml-auto mr-auto aspect-auto min-h-96 max-h-[30rem] rounded-md"
+                  className="my-4 ml-auto mr-auto aspect-auto min-h-52 md:min-h-96 max-h-[30rem] rounded-md"
                 />
                 {desc && <p className="text-sm text-center !-mt-3 lg:!-mt-6">{desc}</p>}
                 </>
