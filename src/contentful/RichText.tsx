@@ -15,7 +15,7 @@ function RichText({ document }: RichTextProps) {
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   return (
-    <>
+    <article className="prose lg:prose-lg prose-h1:text-xl md:prose-h1:text-2xl lg:prose-h1:text-3xl prose-img:w-full max-w-none">
       {documentToReactComponents(document, {
         renderNode: {
           [BLOCKS.EMBEDDED_ASSET]: (node) => {
@@ -40,7 +40,7 @@ function RichText({ document }: RichTextProps) {
           },
         },
       })}
-    </>
+    </article>
   );
 }
 

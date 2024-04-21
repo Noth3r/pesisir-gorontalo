@@ -52,7 +52,7 @@ function BlogData({ blogPosts }: { blogPosts: BlogPost[] }) {
 
 const BlogComponent = (blogPost: BlogPost) => {
   return (
-    <div className="flex w-3/4 mb-32 gap-4 rounded-xl bg-bluish-100 p-4">
+    <div className="flex w-3/4 mb-12 gap-4 rounded-xl bg-bluish-100 p-4">
       <div className="basis-1/3">
         <img
           src={blogPost.image?.src}
@@ -65,7 +65,7 @@ const BlogComponent = (blogPost: BlogPost) => {
       </div>
       <div className="flex flex-col justify-between basis-2/3">
         <div>
-          <h1 className="font-cocogoose text-2xl">{blogPost.title}</h1>
+          <h1 className="font-futura font-bold text-2xl">{blogPost.title}</h1>
           <p>{blogPost.date}</p>
         </div>
 

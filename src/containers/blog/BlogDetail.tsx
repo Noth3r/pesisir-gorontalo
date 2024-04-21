@@ -7,7 +7,6 @@ async function BlogDetail({blogPost}: {blogPost: BlogPost}) {
 
   return (
     <div className="container mb-32">
-    <div className="mt-8 flex flex-col">
       {blogPost.image && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -15,23 +14,27 @@ async function BlogDetail({blogPost}: {blogPost: BlogPost}) {
           srcSet={`${blogPost.image.src}?w=1280 1x, ${blogPost.image.src} 2x`}
           width={1280}
           height={720}
-          className="aspect-video self-center rounded-md"
+          className="aspect-video w-full mt-8 self-center rounded-md"
           alt={blogPost.image.alt}
         />
       )}
 
-      <div className="bg-bluish-100 mt-12 py-8">
-        <h1 className="text-4xl">{blogPost.title}</h1>
+      <div 
+      style={{marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)"}}
+      className="bg-bluish-100 mt-12 py-8 w-screen">
+        <div className="container">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">{blogPost.title}</h1>
         <p className="mt-2 text-gray-500">
           {blogPost.date} - <span className="text-purplish-200">{blogPost.author}</span>
         </p>
+        </div>
       </div>
-
+      <div className="flex flex-col">
       <div className="flex relative gap-12 mt-8">
-      <div className="basis-3/4 font-futura text-lg font-light flex flex-col text-justify leading-relaxed">
+      <div className="xl:basis-3/4 font-futura text-lg font-light flex flex-col text-justify leading-relaxed">
         <RichText document={blogPost.body} />
       </div>
-        <div className="basis-1/4 sticky top-20 self-start">
+        <div className="hidden xl:block xl:basis-1/4 sticky top-20 self-start">
         <h1 className="text-2xl">Artikel Lain</h1>
         <ul>
 
