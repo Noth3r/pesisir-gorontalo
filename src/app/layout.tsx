@@ -21,7 +21,7 @@ export default function RootLayout({
       scrollBehavior: "smooth" ,
     }}
     lang="en">
-      <body className={`font-futura ${montserrat.variable} ${beach.variable} ${cocogoose.variable} ${futura.variable}`}>{children}
+      <body className={`overflow-x-hidden font-futura ${montserrat.variable} ${beach.variable} ${cocogoose.variable} ${futura.variable}`}>{children}
       <SpeedInsights/>
       <Analytics/>
       </body>

@@ -1,0 +1,3301 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "blog",
+        "type": "ContentType",
+        "createdAt": "2024-03-14T04:39:46.119Z",
+        "updatedAt": "2024-03-14T05:39:46.603Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-03-14T05:39:46.603Z",
+        "firstPublishedAt": "2024-03-14T04:39:47.038Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Blog",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cover",
+          "name": "Cover",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkMimetypeGroup": [
+                  "image"
+                ]
+              }
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "author"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "author",
+        "type": "ContentType",
+        "createdAt": "2024-03-14T04:41:31.900Z",
+        "updatedAt": "2024-03-14T04:50:33.748Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-03-14T04:50:33.748Z",
+        "firstPublishedAt": "2024-03-14T04:41:32.430Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Member",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photo",
+          "name": "Photo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "cluster",
+          "name": "Cluster",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "cluster"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "cluster",
+        "type": "ContentType",
+        "createdAt": "2024-03-14T04:50:19.698Z",
+        "updatedAt": "2024-03-14T04:50:20.177Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-03-14T04:50:20.177Z",
+        "firstPublishedAt": "2024-03-14T04:50:20.177Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        }
+      },
+      "displayField": "nama",
+      "name": "Cluster",
+      "description": "",
+      "fields": [
+        {
+          "id": "nama",
+          "name": "Nama",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zvq2wf4e9his",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2024-03-14T04:39:47.247Z",
+        "createdBy": {
+          "sys": {
+            "id": "4csp5zRBD2K5ZR9oqJJkBP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-03-14T05:39:47.521Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4csp5zRBD2K5ZR9oqJJkBP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blog",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "trackingFieldId": "title"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cover",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "author",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": false
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zvq2wf4e9his",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-03-14T04:41:32.566Z",
+        "createdBy": {
+          "sys": {
+            "id": "4csp5zRBD2K5ZR9oqJJkBP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-03-14T04:50:34.712Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4csp5zRBD2K5ZR9oqJJkBP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "author",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cluster",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "zvq2wf4e9his",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-03-14T04:50:20.329Z",
+        "createdBy": {
+          "sys": {
+            "id": "4csp5zRBD2K5ZR9oqJJkBP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-03-14T04:50:21.327Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4csp5zRBD2K5ZR9oqJJkBP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "cluster",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "nama",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "sRZ0C8AhvHNnDLGYcIpp0",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:43:33.839Z",
+        "updatedAt": "2024-03-14T04:50:57.987Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:50:57.987Z",
+        "firstPublishedAt": "2024-03-14T04:44:13.094Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Agnes Angella Natasya Kusuma"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1S7GR05GBkMdWRoBwU1YF7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "2q9zHTOAYKfdVzGBdc7ucw",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:44:19.905Z",
+        "updatedAt": "2024-03-14T04:57:28.223Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.223Z",
+        "firstPublishedAt": "2024-03-14T04:44:28.425Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Rafi Akmal Raharjo"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1S7GR05GBkMdWRoBwU1YF7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "221r4EjxUspQHx0MQCRMmH",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:44:32.572Z",
+        "updatedAt": "2024-03-14T04:57:27.649Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:27.649Z",
+        "firstPublishedAt": "2024-03-14T04:44:40.607Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Indira Fikri Amalia"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1S7GR05GBkMdWRoBwU1YF7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "7xKb8BYM5fIbiUNM6Y6EPT",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:44:42.261Z",
+        "updatedAt": "2024-03-14T04:57:27.442Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-03-14T04:57:27.442Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.300Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Andre Dwi Daffarianto"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1S7GR05GBkMdWRoBwU1YF7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "2TKKI6T9Hy9i0FFr72qrAC",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:44:48.189Z",
+        "updatedAt": "2024-03-14T04:58:58.793Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-03-14T04:58:58.793Z",
+        "firstPublishedAt": "2024-03-14T04:44:54.046Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Helmy Daffa Edgard"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1S7GR05GBkMdWRoBwU1YF7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "71fczv1hrAiS4iXo2UHWWV",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:44:55.560Z",
+        "updatedAt": "2024-03-14T04:57:28.132Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-03-14T04:57:28.132Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.527Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Muhammad Aminudin"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1S7GR05GBkMdWRoBwU1YF7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "MBAmwBvMJT4Uv91u0V5gs",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:45:00.804Z",
+        "updatedAt": "2024-03-14T04:57:27.708Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-03-14T04:57:27.708Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.429Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Luthfi Azizah Azhar"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1S7GR05GBkMdWRoBwU1YF7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "DTAlNuSM4nxVcaIdAyLWc",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:45:15.938Z",
+        "updatedAt": "2024-03-14T04:57:27.562Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:27.562Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.401Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Dike Rani Feirisa"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1S7GR05GBkMdWRoBwU1YF7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "0X8Vzik18TDclW2clTBqI",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:45:20.892Z",
+        "updatedAt": "2024-03-14T04:57:28.102Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.102Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.502Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Mohammad Atha Adhiensyach"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "4ajH0mrbgPehjZ2L0exgm1",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:46:45.790Z",
+        "updatedAt": "2024-03-14T04:57:28.209Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.209Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.977Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Nidaul Fauzna Rachman"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "6oovyl8jXM6LetOEqGIFsV",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:46:50.314Z",
+        "updatedAt": "2024-03-14T04:57:28.239Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.239Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.992Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Rahardian Wisnujati"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "46nW7RSNCd2HgteeYXacgL",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:46:54.562Z",
+        "updatedAt": "2024-03-14T04:57:27.482Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:27.482Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.315Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Azzakhruf Aryan Nur Ihsan"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "1XpuyJ91TsDXzZd1dTYKsb",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:46:58.916Z",
+        "updatedAt": "2024-03-14T04:51:44.850Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:51:44.850Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.269Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Alfian Eka Setyawan"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "2ipoYTczSKJAzlqdJ3hEym",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:03.070Z",
+        "updatedAt": "2024-03-14T04:57:27.507Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:27.507Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.329Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Cantika Prameswari Darmawan"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "4tshYA1H88oBAaOy9KkfUG",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:07.657Z",
+        "updatedAt": "2024-03-14T04:57:27.548Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:27.548Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.387Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Dheyang Annisa Widayati"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "w6fIZd7OrfWWhKtTKDTeA",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:11.996Z",
+        "updatedAt": "2024-03-14T04:57:28.267Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.267Z",
+        "firstPublishedAt": "2024-03-14T04:48:31.101Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Siti Nur Fadilah"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "3WLVEKQ2xsWJkukGsPIMWj",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:16.540Z",
+        "updatedAt": "2024-03-14T04:57:28.117Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.117Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.514Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Muhamad Daffa Aditya Eka Pratama "
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "64TJX0Ap1QaGTzwfSUesYC",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:21.124Z",
+        "updatedAt": "2024-03-14T04:57:28.161Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.161Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.678Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Nadya Amara Putri "
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5fSrEAnIr60lUlwgVO4Sbn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "2A6USq3Lm7ODmREAwwY6Az",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:25.508Z",
+        "updatedAt": "2024-03-14T04:57:28.308Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.308Z",
+        "firstPublishedAt": "2024-03-14T04:48:31.119Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Tri Muslikhah Nurul Izati"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1OFvX9sjpNz4Ez3DJVPPEQ"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "4i8PRImhCgWAc1CIxfld8T",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:29.971Z",
+        "updatedAt": "2024-03-14T04:57:27.523Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:27.523Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.344Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Checillia Icha Putri"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1OFvX9sjpNz4Ez3DJVPPEQ"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "3NnR2wXlb2Lmui6mjWTGgH",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:34.202Z",
+        "updatedAt": "2024-03-14T04:57:28.254Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.254Z",
+        "firstPublishedAt": "2024-03-14T04:48:31.006Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Shafwah Zaimah Zahidah"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "0WpsM7WjWj96QqdzFbnaK"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "5uZYxnIyEkoJYeagIbuTaE",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:38.570Z",
+        "updatedAt": "2024-03-14T04:57:28.146Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.146Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.582Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Muhammad Fandany Mahendratama"
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "0WpsM7WjWj96QqdzFbnaK"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "4fz2F3oq9lsLHWFlzuT6l1",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:42.907Z",
+        "updatedAt": "2024-03-14T04:57:27.607Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:27.607Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.414Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Eusebius Farrell Abhinandan "
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "0WpsM7WjWj96QqdzFbnaK"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "4LIeq24rMPY3WlZR1EbpNs",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:47:47.447Z",
+        "updatedAt": "2024-03-14T04:57:28.003Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T04:57:28.003Z",
+        "firstPublishedAt": "2024-03-14T04:48:30.488Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Maila Asfiani Fatikha "
+        },
+        "cluster": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "0WpsM7WjWj96QqdzFbnaK"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "1S7GR05GBkMdWRoBwU1YF7",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:50:40.213Z",
+        "updatedAt": "2024-03-14T04:50:51.291Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-03-14T04:50:51.291Z",
+        "firstPublishedAt": "2024-03-14T04:50:51.291Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cluster"
+          }
+        }
+      },
+      "fields": {
+        "nama": {
+          "en-US": "soshum"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "5fSrEAnIr60lUlwgVO4Sbn",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:51:25.220Z",
+        "updatedAt": "2024-03-14T04:51:37.385Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-03-14T04:51:37.385Z",
+        "firstPublishedAt": "2024-03-14T04:51:37.385Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cluster"
+          }
+        }
+      },
+      "fields": {
+        "nama": {
+          "en-US": "saintek"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "1OFvX9sjpNz4Ez3DJVPPEQ",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:53:06.741Z",
+        "updatedAt": "2024-03-14T04:53:11.614Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-03-14T04:53:11.614Z",
+        "firstPublishedAt": "2024-03-14T04:53:11.614Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cluster"
+          }
+        }
+      },
+      "fields": {
+        "nama": {
+          "en-US": "medika"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "0WpsM7WjWj96QqdzFbnaK",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:53:41.205Z",
+        "updatedAt": "2024-03-14T04:53:45.042Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-03-14T04:53:45.042Z",
+        "firstPublishedAt": "2024-03-14T04:53:45.042Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cluster"
+          }
+        }
+      },
+      "fields": {
+        "nama": {
+          "en-US": "agro"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "13rOpTHyXTvWMj9WZ307Q1",
+        "type": "Entry",
+        "createdAt": "2024-03-14T04:59:26.146Z",
+        "updatedAt": "2024-03-14T05:02:55.538Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-03-14T05:02:55.538Z",
+        "firstPublishedAt": "2024-03-14T05:01:55.186Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "testing"
+        },
+        "slug": {
+          "en-US": "testing"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices lacus eu diam commodo dignissim. Etiam semper sagittis enim ut sagittis. Maecenas aliquam, metus at efficitur bibendum, mauris ex hendrerit nibh, id venenatis nibh urna at leo. Integer a facilisis mi. Vivamus viverra, est ut feugiat aliquam, massa ligula gravida justo, vel hendrerit leo nulla vitae eros. Pellentesque mollis auctor nunc vel hendrerit. Vivamus mollis arcu sed sollicitudin accumsan. Vivamus eu maximus dolor. Sed rhoncus augue leo, non congue quam lacinia a. Maecenas in nisi sit amet metus aliquet rhoncus et ac justo. Praesent dignissim condimentum lectus in euismod. Phasellus urna metus, volutpat a risus quis, ultricies posuere lorem.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Integer condimentum dui non congue bibendum. Sed eu enim leo. Sed eleifend mi non mi fermentum, non fermentum tortor hendrerit. Etiam non ultrices arcu, semper tempor tellus. Mauris rutrum, velit vitae viverra interdum, enim nulla consequat tortor, ac ullamcorper odio erat nec metus. Integer enim sapien, sollicitudin iaculis venenatis non, dignissim eget ante. Vestibulum sed ante eleifend, viverra tellus a, semper neque. Nunc felis lorem, dapibus ac accumsan id, mollis a risus. In dapibus lacinia orci, id porta nunc viverra in. Aliquam et scelerisque purus. Praesent vel nulla auctor risus fringilla fermentum non sit amet nunc.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Nulla mauris est, aliquam id ipsum eget, scelerisque rutrum diam. Ut rhoncus ultricies tortor, id feugiat tortor volutpat nec. Aenean pharetra ligula a libero tincidunt ultrices. Etiam tempus dictum odio non tincidunt. Morbi ac est rutrum, interdum diam at, vulputate lorem. Fusce dictum nunc et interdum pellentesque. Curabitur ut hendrerit lectus. Phasellus eros dui, commodo quis fermentum eu, placerat in quam. Morbi scelerisque lobortis erat ut convallis.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Donec aliquam ac lectus vitae euismod. Aliquam facilisis malesuada neque et accumsan. Vestibulum pretium odio nec pharetra luctus. Sed dignissim ante quis lectus tempor, quis tempor erat suscipit. Nunc leo mi, semper eget accumsan vitae, blandit vel nisi. Pellentesque tempor vulputate pellentesque. Fusce eleifend pellentesque convallis. Vivamus tincidunt velit vel neque tincidunt gravida. Quisque sit amet lorem mi. Fusce eros ligula, pellentesque sit amet rutrum a, sagittis a elit. Quisque venenatis nulla eu erat aliquet, eget pretium massa volutpat.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2jEPVL8Q5IHfh1baalExag",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Nam eget velit feugiat, efficitur metus id, consectetur nibh. Sed rhoncus blandit risus sit amet sollicitudin. Donec ex felis, fermentum vel tortor quis, auctor ultrices nisi. Aenean pulvinar volutpat est, ac tempus lorem sodales id. In vel vehicula diam. Maecenas et libero ac nisi blandit faucibus. Fusce eget fringilla ante. Phasellus dictum leo sed lorem faucibus, ut pellentesque sapien vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eu enim a ipsum feugiat laoreet sed ac nulla. Etiam pellentesque dui quis purus efficitur varius. Nullam nibh mauris, eleifend at egestas quis, faucibus a elit. Quisque at turpis sed erat efficitur sollicitudin vitae at augue. Curabitur rhoncus ut felis eu dignissim. Fusce dapibus risus sed quam pharetra malesuada.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "cover": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2jEPVL8Q5IHfh1baalExag"
+              }
+            }
+          ]
+        },
+        "date": {
+          "en-US": "2024-03-14T00:00"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "46nW7RSNCd2HgteeYXacgL"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "id": "2jEPVL8Q5IHfh1baalExag",
+        "type": "Asset",
+        "createdAt": "2024-03-14T05:00:05.597Z",
+        "updatedAt": "2024-03-14T05:00:33.167Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-03-14T05:00:33.167Z",
+        "firstPublishedAt": "2024-03-14T05:00:33.167Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "tes"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/zvq2wf4e9his/2jEPVL8Q5IHfh1baalExag/e0078b5a5899ee19ecffde47a9e85ae2/Screenshot_2023-12-06_223444.png",
+            "details": {
+              "size": 1551713,
+              "image": {
+                "width": 1083,
+                "height": 869
+              }
+            },
+            "fileName": "Screenshot 2023-12-06 223444.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "4m6R9AwVFUXIk539nNk26R",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "951fec29-4ce2-4d70-af6e-2623edbe2fd6"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "createdAt": "2024-03-14T04:30:49Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedAt": "2024-03-14T04:30:49Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4mRYq9czBo8tjBAr4CTkMF",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "createdAt": "2024-03-14T04:30:50Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedAt": "2024-03-14T04:30:50Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4mSv3ckE8UUjq12Wvebkzf",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "createdAt": "2024-03-14T04:30:50Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedAt": "2024-03-14T04:30:50Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4mSVX8dR9y6VByDSxsojAt",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "zvq2wf4e9his"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "createdAt": "2024-03-14T04:30:50Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4csp5zRBD2K5ZR9oqJJkBP"
+          }
+        },
+        "updatedAt": "2024-03-14T04:30:50Z"
+      }
+    }
+  ]
+}

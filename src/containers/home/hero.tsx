@@ -4,25 +4,30 @@ import React from "react";
 
 const listDesa = [
   {
-    nama: "Coming Soon",
+    nama: "Olimo'o",
     link: "#",
     bgColor: "#BFF0CB",
   },
   {
-    nama: "Coming Soon",
+    nama: "Lamu",
     link: "#",
     bgColor: "#FAE260",
   },
   {
-    nama: "Coming Soon",
+    nama: "Langgula",
     link: "#",
-    bgColor: "#2AA19D",
+    bgColor: "#E4DFFD",
   },
+  {
+    nama: "Tontayuo",
+    link: "#",
+    bgColor: "#C4DDFF",
+  }
 ];
 
 function Hero() {
   return (
-    <div className="relative w-full bg-cover bg-top bg-no-repeat pt-4 md:pt-12 2xl:pt-20">
+    <div className="relative w-full bg-cover bg-top bg-no-repeat">
       <Image
         quality={100}
         src="/hero.png"
@@ -72,7 +77,7 @@ function Hero() {
           <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-12 md:gap-y-0 xl:gap-x-64">
             {listDesa.map((desa, index) => {
               return (
-                <div key={index} className="flex flex-col items-center gap-4">
+                <div key={index} className="flex flex-col items-center gap-4 hover:scale-110 transition-all duration-200">
                   <Link href={desa.link}>
                     <button
                       style={{

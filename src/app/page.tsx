@@ -8,7 +8,7 @@ import Navbar from "~/containers/navbar";
 
 export default function HomePage() {
   return (
-      <main className="overflow-hidden">
+      <main>
         <Navbar />
         <Hero />
         <BeritaTerbaru />
