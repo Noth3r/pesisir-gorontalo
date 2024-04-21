@@ -21,7 +21,7 @@ function BlogData({ blogPosts }: { blogPosts: BlogPost[] }) {
       });
   };
 
-  const [value] = useDebounce(searchQuery, 500);
+  const [value] = useDebounce(searchQuery, 250);
 
   useEffect(() => {
     handleSearch(value);
