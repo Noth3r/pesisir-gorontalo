@@ -34,7 +34,7 @@ function RichText({ document }: RichTextProps) {
                   alt={data?.alt}
                   className="my-4 aspect-video rounded-md"
                 />
-                {desc && <p className="text-sm text-center -mt-3 mb-2">{desc}</p>}
+                {desc && <p className="text-sm text-center !-mt-6">{desc}</p>}
                 </>
             );
           },
