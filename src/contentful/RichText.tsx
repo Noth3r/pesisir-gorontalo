@@ -27,15 +27,15 @@ function RichText({ document }: RichTextProps) {
               | undefined;
             return (
               // eslint-disable-next-line @next/next/no-img-element
-              <div className="flex flex-col items-center">
+              <>
                 <img
                   src={data?.src}
                   srcSet={`${data?.src} 1x, ${data?.src} 2x`}
                   alt={data?.alt}
                   className="my-4 aspect-video rounded-md"
                 />
-                {desc && <p className="text-sm -mt-3 mb-2">{desc}</p>}
-              </div>
+                {desc && <p className="text-sm text-center -mt-3 mb-2">{desc}</p>}
+                </>
             );
           },
         },
