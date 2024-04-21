@@ -12,9 +12,9 @@ async function BlogDetail({ blogPost }: { blogPost: BlogPost }) {
         <img
           src={blogPost.image.src}
           srcSet={`${blogPost.image.src}?w=1280 1x, ${blogPost.image.src} 2x`}
-          width={1280}
-          height={720}
-          className="mt-8 aspect-video w-full self-center rounded-md"
+          width={1000}
+          height={640}
+          className="mt-8 aspect-video w-5/6 ml-auto mr-auto self-center rounded-md"
           alt={blogPost.image.alt}
         />
       )}

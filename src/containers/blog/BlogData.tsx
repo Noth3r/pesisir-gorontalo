@@ -28,19 +28,19 @@ function BlogData({ blogPosts }: { blogPosts: BlogPost[] }) {
   }, [value]);
 
   return (
-    <div className="flex flex-col items-center min-h-screen">
+    <div className="flex min-h-screen flex-col items-center">
       <input
         type="text"
         value={searchQuery}
         placeholder="Cari Artikel..."
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="my-4 w-1/3 rounded-xl px-4 py-2"
+        className="my-4 rounded-xl px-4 py-2 w-full md:w-2/3"
       />
 
-      <ul className="w-full flex flex-col items-center mt-6">
+      <ul className="mt-6 flex w-full flex-col items-center">
         {searchQuery != ""
           ? searchResults.map((blogPost) => (
-            <BlogComponent key={blogPost.slug} {...blogPost} />
+              <BlogComponent key={blogPost.slug} {...blogPost} />
             ))
           : blogPosts.map((blogPost) => (
               <BlogComponent key={blogPost.slug} {...blogPost} />
@@ -52,8 +52,8 @@ function BlogData({ blogPosts }: { blogPosts: BlogPost[] }) {
 
 const BlogComponent = (blogPost: BlogPost) => {
   return (
-    <div className="flex w-3/4 mb-12 gap-4 rounded-xl bg-bluish-100 p-4">
-      <div className="basis-1/3">
+    <div className="mb-12 flex gap-4 rounded-xl bg-bluish-100 p-4 lg:w-3/4">
+      <div className="hidden md:block md:basis-1/3">
         <img
           src={blogPost.image?.src}
           srcSet={`${blogPost.image?.src}?w=300 1x, ${blogPost.image?.src} 2x`}
@@ -63,14 +63,23 @@ const BlogComponent = (blogPost: BlogPost) => {
           alt={blogPost.image?.alt}
         />
       </div>
-      <div className="flex flex-col justify-between basis-2/3">
+      <div className="flex flex-col justify-between md:basis-2/3">
         <div>
-          <h1 className="font-futura font-bold text-2xl">{blogPost.title}</h1>
-          <p>{blogPost.date}</p>
+          <h1 className="font-futura text-xl font-bold lg:text-2xl">
+            {blogPost.title}
+          </h1>
+          <div className="flex w-full justify-between mt-4 md:mt-0">
+            <p className="mt-2 text-sm">{blogPost.date}</p>
+            <Link className="md:hidden self-end" href={`/blog/${blogPost.slug}`}>
+              <button className="rounded-lg text-sm bg-bluish-300 p-2 font-cocogoose font-[350] text-bluish-100">
+                Kunjungi
+              </button>
+            </Link>
+          </div>
         </div>
 
-        <Link className="self-end" href={`/blog/${blogPost.slug}`}>
-          <button className="rounded-lg bg-bluish-300 text-bluish-100 p-2 font-cocogoose font-[350]">
+        <Link className="hidden md:block self-end" href={`/blog/${blogPost.slug}`}>
+          <button className="rounded-lg bg-bluish-300 p-2 font-cocogoose font-[350] text-bluish-100">
             Kunjungi
           </button>
         </Link>

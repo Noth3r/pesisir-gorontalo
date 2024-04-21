@@ -11,10 +11,10 @@ async function Blog() {
       <Navbar />
       <div className="container">
         <div className="flex flex-col items-center justify-center pt-16">
-          <h1 className="font-cocogoose text-4xl font-light text-bluish-100">
+          <h1 className="font-cocogoose text-center text-xl lg:text-4xl font-light text-bluish-100">
             Artikel Terbaru
           </h1>
-          <p className="font-beach text-5xl text-bluish-100">
+          <p className="font-beach text-2xl text-center lg:text-5xl text-bluish-100">
             Pesisir Gorontalo 2024
           </p>
         </div>
