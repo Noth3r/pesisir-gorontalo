@@ -37,7 +37,7 @@ function BlogData({ blogPosts }: { blogPosts: BlogPost[] }) {
         className="my-4 w-1/3 rounded-xl px-4 py-2"
       />
 
-      <ul className="w-full flex flex-col items-center">
+      <ul className="w-full flex flex-col items-center mt-6">
         {searchQuery != ""
           ? searchResults.map((blogPost) => (
             <BlogComponent key={blogPost.slug} {...blogPost} />
