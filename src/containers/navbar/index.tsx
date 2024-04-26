@@ -21,7 +21,7 @@ const navbarList = [
   {
     name: "Blog",
     link: "/blog",
-    active: false,
+    active: true,
   },
   {
     name: "Anggota",
