@@ -6,14 +6,19 @@ import { useEffect, useState } from "react";
 import { searchBlogPosts, type BlogPost } from "~/contentful/blogPosts";
 import { useDebounce } from "use-debounce";
 
-function BlogData({ blogPosts }: { blogPosts: BlogPost[] }) {
+function BlogData({ blogPosts, authors }: { blogPosts: BlogPost[], authors: string[] }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<BlogPost[]>([]);
+  const [searchAuthor, setSearchAuthor] = useState("");
 
-  const handleSearch = (query: string) => {
+  const handleSearch = (query: string, author: string) => {
     setSearchQuery(query);
     searchBlogPosts({ query, preview: false })
       .then((results) => {
+        console.log(results)
+        if (author) {
+          results = results.filter((result) => result.author === author);
+        }
         setSearchResults(results);
       })
       .catch((err) => {
@@ -24,21 +29,35 @@ function BlogData({ blogPosts }: { blogPosts: BlogPost[] }) {
   const [value] = useDebounce(searchQuery, 250);
 
   useEffect(() => {
-    handleSearch(value);
-  }, [value]);
+    handleSearch(value, searchAuthor);
+  }, [value, searchAuthor]);
 
   return (
     <div className="flex min-h-screen flex-col items-center">
+      <div className="flex w-full gap-4 justify-center items-center h-10 my-4 ">
       <input
         type="text"
         value={searchQuery}
         placeholder="Cari Artikel..."
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="my-4 rounded-xl px-4 py-2 w-full md:w-2/3"
+        className="rounded-xl px-4 py-2 h-full w-full md:w-2/3"
       />
 
-      <ul className="mt-6 flex w-full flex-col items-center">
-        {searchQuery != ""
+      <select
+        className="rounded-xl px-4 w-1/4 h-full"
+        onChange={(e) => setSearchAuthor(e.target.value)}
+      >
+        <option value="">Semua Penulis</option>
+        {authors.map((author) => (
+          <option key={author} value={author}>
+            {author}
+          </option>
+        ))}
+      </select>
+      </div>
+
+      <ul className="mt-6 flex w-full flex-col items-center mb-24">
+        {(searchQuery != "" || searchAuthor != "")
           ? searchResults.map((blogPost) => (
               <BlogComponent key={blogPost.slug} {...blogPost} />
             ))

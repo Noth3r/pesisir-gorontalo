@@ -60,12 +60,23 @@ export async function fetchBlogPosts({
     limit: limit ?? 5,
     include: 5,
     skip: skip ?? 0,
-    order: ["fields.date"],
+    order: ["-fields.date"],
   });
 
   return blogPostsResult.items.map(
     (blogPostEntry) => parseContentfulBlogPost(blogPostEntry)!,
   );
+}
+
+export async function fetchAuthors() {
+  const contentful = contentfulClient({ preview: false });
+
+  const authorsResult = await contentful.getEntries<TypeAuthorSkeleton>({
+    content_type: "author",
+    order: ["fields.name"],
+  });
+
+  return authorsResult.items.map((authorEntry) => authorEntry.fields.name);
 }
 
 interface SearchBlogPostsOptions {
@@ -79,8 +90,6 @@ export async function searchBlogPosts({preview,query}: SearchBlogPostsOptions) {
   const blogPostsResult = await contentful.getEntries<TypeBlogSkeleton>({
     content_type: "blog",
     "fields.title[match]": query,
-    include: 5,
-    limit: 5,
   });
 
   return blogPostsResult.items.map(

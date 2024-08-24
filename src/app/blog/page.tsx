@@ -1,10 +1,11 @@
 import BlogData from "~/containers/blog/BlogData";
 import Footer from "~/containers/footer";
 import Navbar from "~/containers/navbar";
-import { fetchBlogPosts } from "~/contentful/blogPosts";
+import { fetchAuthors, fetchBlogPosts } from "~/contentful/blogPosts";
 
 async function Blog() {
-  const blogPosts = await fetchBlogPosts({ preview: false });
+  const blogPosts = await fetchBlogPosts({ preview: false, limit: 1000 });
+  const authors = await fetchAuthors();
 
   return (
     <main className="bg-purplish-200">
@@ -18,7 +19,7 @@ async function Blog() {
             Pesisir Gorontalo 2024
           </p>
         </div>
-        <BlogData blogPosts={blogPosts} />
+        <BlogData blogPosts={blogPosts} authors={authors} />
       </div>
       <Footer/>
     </main>
